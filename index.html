@@ -4,12 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>O.G Boutique | Fashion, Style & Accessories</title>
+  <title>O.G Boutique | Nigerian Fashion & Lifestyle</title>
 
-  <meta name="description" content="O.G Boutique in Lafia, Nasarawa. Discover clothing, shoes, bags and fashion accessories.">
-  <meta name="theme-color" content="#a9673f">
+  <meta
+    name="description"
+    content="O.G Boutique — Nigerian fashion, clothing, footwear, bags and accessories in Lafia, Nasarawa."
+  >
+
+  <meta name="theme-color" content="#8b4f2f">
 
   <style>
+
     * {
       margin: 0;
       padding: 0;
@@ -19,8 +24,8 @@
 
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background: #faf9f7;
-      color: #171513;
+      background: #faf7f2;
+      color: #211914;
       line-height: 1.6;
     }
 
@@ -29,78 +34,84 @@
       display: block;
     }
 
-    button,
-    a {
-      font-family: inherit;
-    }
-
     a {
       text-decoration: none;
       color: inherit;
     }
 
-    /* =========================
+    button,
+    input {
+      font-family: inherit;
+    }
+
+    /* ==============================
        HEADER
-    ========================= */
+    ============================== */
 
     header {
       position: sticky;
       top: 0;
       z-index: 1000;
       background: rgba(255,255,255,0.97);
+      border-bottom: 1px solid #eadfd5;
       backdrop-filter: blur(12px);
-      border-bottom: 1px solid #eee8e2;
     }
 
     .navbar {
+      min-height: 76px;
       max-width: 1150px;
       margin: auto;
-      min-height: 76px;
       padding: 0 20px;
+
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
 
     .logo {
-      font-size: 27px;
+      font-size: 26px;
       font-weight: 900;
       letter-spacing: -1px;
     }
 
     .logo span {
-      color: #a9673f;
+      color: #a45f39;
     }
 
-    .menu-btn {
-      width: 46px;
-      height: 46px;
+    .menu-button {
+      width: 45px;
+      height: 45px;
       border: none;
       background: transparent;
-      cursor: pointer;
+
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       gap: 6px;
+
+      cursor: pointer;
     }
 
-    .menu-btn span {
+    .menu-button span {
       width: 28px;
       height: 3px;
-      background: #171513;
       border-radius: 5px;
+      background: #211914;
     }
 
     .nav-links {
       display: none;
+
       position: absolute;
       top: 76px;
       left: 0;
       right: 0;
+
       background: white;
-      border-bottom: 1px solid #eee8e2;
-      padding: 12px 20px 20px;
+      padding: 10px 20px 20px;
+
+      border-bottom: 1px solid #eadfd5;
     }
 
     .nav-links.active {
@@ -109,61 +120,78 @@
 
     .nav-links a {
       display: block;
-      padding: 13px 5px;
+      padding: 13px 4px;
+
       font-weight: 700;
-      border-bottom: 1px solid #f0ece8;
+      border-bottom: 1px solid #f0e8e0;
     }
 
-    /* =========================
+
+    /* ==============================
        HERO
-    ========================= */
+    ============================== */
 
     .hero {
-      min-height: 620px;
+      min-height: 650px;
+
+      position: relative;
+
       display: flex;
       align-items: center;
-      position: relative;
-      background:
-        linear-gradient(rgba(28,22,19,0.58), rgba(28,22,19,0.68)),
-        url("https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1400&q=85")
-        center/cover no-repeat;
+
       color: white;
+
+      background:
+        linear-gradient(
+          rgba(34, 20, 13, 0.55),
+          rgba(34, 20, 13, 0.72)
+        ),
+        url("https://www.horniman.ac.uk/wp-content/uploads/2017/03/Image-5-web-1200x800.jpg")
+        center / cover no-repeat;
     }
 
     .hero-content {
       width: 100%;
       max-width: 1150px;
       margin: auto;
-      padding: 65px 24px;
+      padding: 70px 24px;
     }
 
-    .eyebrow {
-      display: inline-block;
-      color: #f0c6aa;
+    .hero-label {
+      color: #f1c6a7;
+
       font-size: 13px;
-      font-weight: 800;
+      font-weight: 900;
+
       letter-spacing: 4px;
-      margin-bottom: 15px;
       text-transform: uppercase;
+
+      margin-bottom: 16px;
     }
 
     .hero h1 {
-      font-size: clamp(48px, 12vw, 86px);
+      max-width: 700px;
+
+      font-size: clamp(47px, 12vw, 86px);
       line-height: 0.98;
-      max-width: 650px;
+
       letter-spacing: -3px;
+
       margin-bottom: 24px;
     }
 
     .hero h1 span {
-      color: #e0a77f;
+      color: #e2a477;
     }
 
     .hero p {
-      max-width: 600px;
+      max-width: 620px;
+
+      color: #f6eee8;
+
       font-size: 18px;
       line-height: 1.75;
-      color: #f6f3f0;
+
       margin-bottom: 30px;
     }
 
@@ -171,128 +199,228 @@
       display: flex;
       flex-direction: column;
       gap: 12px;
-      max-width: 390px;
+
+      max-width: 400px;
     }
 
-    .btn {
-      min-height: 58px;
-      padding: 15px 24px;
-      border-radius: 13px;
-      border: 2px solid transparent;
+    .button {
+      min-height: 56px;
+
+      padding: 14px 22px;
+
+      border-radius: 12px;
+
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 16px;
+
       font-weight: 800;
-      cursor: pointer;
-      transition: 0.2s ease;
+
+      transition: 0.2s;
     }
 
-    .btn-primary {
-      background: #b4734a;
+    .button-primary {
+      background: #b66d42;
       color: white;
     }
 
-    .btn-primary:hover {
-      background: #995c38;
+    .button-primary:hover {
+      background: #965331;
       transform: translateY(-2px);
     }
 
-    .btn-white {
+    .button-light {
       background: white;
-      color: #211c19;
+      color: #211914;
     }
 
-    .btn-white:hover {
+    .button-light:hover {
       transform: translateY(-2px);
     }
 
-    /* =========================
-       QUICK FEATURES
-    ========================= */
 
-    .features {
+    /* ==============================
+       INTRO CARDS
+    ============================== */
+
+    .intro {
       max-width: 1100px;
       margin: -45px auto 0;
-      padding: 0 18px;
+
       position: relative;
       z-index: 5;
+
+      padding: 0 18px;
     }
 
-    .feature-grid {
+    .intro-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 12px;
     }
 
-    .feature {
+    .intro-card {
       background: white;
-      border: 1px solid #eee7e1;
+
+      border: 1px solid #eadfd5;
       border-radius: 17px;
+
       padding: 22px 15px;
+
       text-align: center;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.07);
+
+      box-shadow: 0 12px 30px rgba(46,31,21,0.08);
     }
 
-    .feature-icon {
+    .intro-icon {
       font-size: 27px;
-      margin-bottom: 7px;
+      margin-bottom: 6px;
     }
 
-    .feature h3 {
+    .intro-card h3 {
       font-size: 15px;
       margin-bottom: 3px;
     }
 
-    .feature p {
+    .intro-card p {
       font-size: 12px;
       color: #777;
     }
 
-    /* =========================
-       GENERAL SECTIONS
-    ========================= */
+
+    /* ==============================
+       GENERAL
+    ============================== */
 
     section {
       padding: 75px 18px;
     }
 
-    .section-container {
+    .container {
       max-width: 1100px;
       margin: auto;
     }
 
     .section-heading {
       text-align: center;
-      margin-bottom: 35px;
+      margin-bottom: 38px;
     }
 
-    .section-heading .small {
-      color: #a9673f;
-      font-weight: 800;
-      font-size: 13px;
+    .section-label {
+      color: #a45f39;
+
+      font-size: 12px;
+      font-weight: 900;
+
       letter-spacing: 3px;
       text-transform: uppercase;
     }
 
     .section-heading h2 {
-      font-size: clamp(30px, 7vw, 48px);
+      font-size: clamp(31px, 7vw, 50px);
       line-height: 1.1;
+
       margin: 8px 0 12px;
     }
 
     .section-heading p {
-      color: #777;
-      max-width: 600px;
+      max-width: 620px;
       margin: auto;
+
+      color: #777;
     }
 
-    /* =========================
+
+    /* ==============================
+       NIGERIAN STYLE SECTION
+    ============================== */
+
+    .culture {
+      background: #fff;
+    }
+
+    .culture-grid {
+      display: grid;
+      gap: 15px;
+    }
+
+    .culture-card {
+      min-height: 260px;
+
+      position: relative;
+
+      overflow: hidden;
+
+      border-radius: 20px;
+
+      color: white;
+
+      display: flex;
+      align-items: flex-end;
+
+      padding: 22px;
+    }
+
+    .culture-card::after {
+      content: "";
+
+      position: absolute;
+      inset: 0;
+
+      background:
+        linear-gradient(
+          transparent 20%,
+          rgba(0,0,0,0.78)
+        );
+    }
+
+    .culture-card img {
+      position: absolute;
+      inset: 0;
+
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+
+      transition: 0.4s;
+    }
+
+    .culture-card:hover img {
+      transform: scale(1.06);
+    }
+
+    .culture-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .culture-content small {
+      color: #f1c39f;
+
+      font-weight: 800;
+
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .culture-content h3 {
+      font-size: 25px;
+      margin-top: 5px;
+    }
+
+    .culture-content p {
+      font-size: 13px;
+      color: #eee;
+    }
+
+
+    /* ==============================
        CATEGORIES
-    ========================= */
+    ============================== */
 
     .categories {
-      background: #fff;
+      background: #f4ede5;
     }
 
     .category-grid {
@@ -303,29 +431,44 @@
 
     .category {
       position: relative;
+
       height: 220px;
+
       overflow: hidden;
+
       border-radius: 18px;
+
       color: white;
+
       display: flex;
       align-items: flex-end;
+
       padding: 20px;
-      background: #333;
     }
 
     .category::after {
       content: "";
+
       position: absolute;
       inset: 0;
-      background: linear-gradient(transparent 25%, rgba(0,0,0,0.75));
+
+      background:
+        linear-gradient(
+          transparent 20%,
+          rgba(0,0,0,0.78)
+        );
     }
 
     .category img {
       position: absolute;
       inset: 0;
+
+      width: 100%;
       height: 100%;
+
       object-fit: cover;
-      transition: transform 0.4s ease;
+
+      transition: 0.4s;
     }
 
     .category:hover img {
@@ -339,7 +482,6 @@
 
     .category h3 {
       font-size: 22px;
-      margin-bottom: 2px;
     }
 
     .category p {
@@ -347,40 +489,49 @@
       opacity: 0.9;
     }
 
-    /* =========================
+
+    /* ==============================
        PRODUCTS
-    ========================= */
+    ============================== */
 
-    .products-section {
-      background: #faf9f7;
+    .products {
+      background: #faf7f2;
     }
 
-    .search-box {
+    .search {
       max-width: 650px;
-      margin: 0 auto 25px;
-      position: relative;
+      margin: 0 auto 22px;
     }
 
-    .search-box input {
+    .search input {
       width: 100%;
-      height: 56px;
-      padding: 0 20px;
+
+      height: 55px;
+
+      padding: 0 19px;
+
+      border: 1px solid #ddd0c4;
       border-radius: 13px;
-      border: 1px solid #ddd4cc;
-      outline: none;
-      font-size: 15px;
+
       background: white;
+
+      outline: none;
+
+      font-size: 15px;
     }
 
-    .search-box input:focus {
-      border-color: #b4734a;
+    .search input:focus {
+      border-color: #a45f39;
     }
 
     .filters {
       display: flex;
       gap: 8px;
+
       overflow-x: auto;
-      padding: 3px 2px 18px;
+
+      padding-bottom: 20px;
+
       scrollbar-width: none;
     }
 
@@ -388,21 +539,26 @@
       display: none;
     }
 
-    .filter-btn {
+    .filter {
       flex-shrink: 0;
+
       padding: 10px 17px;
-      border: 1px solid #ddd4cc;
+
+      border: 1px solid #ddd0c4;
       border-radius: 30px;
+
       background: white;
+
       cursor: pointer;
-      font-weight: 700;
+
       font-size: 13px;
+      font-weight: 800;
     }
 
-    .filter-btn.active {
-      background: #1b1715;
+    .filter.active {
+      background: #241a15;
       color: white;
-      border-color: #1b1715;
+      border-color: #241a15;
     }
 
     .product-grid {
@@ -411,46 +567,54 @@
       gap: 14px;
     }
 
-    .product-card {
+    .product {
       background: white;
-      border: 1px solid #eee7e1;
-      border-radius: 16px;
-      overflow: hidden;
-      transition: 0.2s ease;
-    }
 
-    .product-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+      border: 1px solid #eadfd5;
+
+      border-radius: 16px;
+
+      overflow: hidden;
     }
 
     .product-image {
       height: 220px;
-      overflow: hidden;
-      background: #eee;
+
       position: relative;
+
+      overflow: hidden;
+
+      background: #ddd;
     }
 
     .product-image img {
+      width: 100%;
       height: 100%;
+
       object-fit: cover;
-      transition: transform 0.4s ease;
+
+      transition: 0.4s;
     }
 
-    .product-card:hover .product-image img {
+    .product:hover .product-image img {
       transform: scale(1.05);
     }
 
-    .product-badge {
+    .badge {
       position: absolute;
+
       top: 10px;
       left: 10px;
+
       background: white;
-      color: #222;
+
       padding: 5px 9px;
+
       border-radius: 20px;
+
       font-size: 10px;
-      font-weight: 800;
+      font-weight: 900;
+
       box-shadow: 0 3px 10px rgba(0,0,0,0.12);
     }
 
@@ -459,61 +623,74 @@
     }
 
     .product-category {
-      color: #a9673f;
-      text-transform: uppercase;
-      letter-spacing: 1px;
+      color: #a45f39;
+
       font-size: 9px;
-      font-weight: 800;
+
+      font-weight: 900;
+
+      letter-spacing: 1px;
+
+      text-transform: uppercase;
     }
 
-    .product-info h3 {
+    .product h3 {
       font-size: 16px;
-      margin: 5px 0;
+
       line-height: 1.3;
+
+      margin: 5px 0;
     }
 
     .price {
-      font-size: 14px;
       font-weight: 800;
-      margin: 7px 0 12px;
+
+      font-size: 13px;
+
+      margin: 8px 0 12px;
     }
 
-    .product-actions {
+    .product-buttons {
       display: flex;
       gap: 7px;
     }
 
-    .product-actions a,
-    .product-actions button {
+    .product-buttons a,
+    .product-buttons button {
       flex: 1;
+
       min-height: 40px;
+
       border-radius: 9px;
-      border: 1px solid #ddd4cc;
+
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 12px;
+
+      border: 1px solid #ddd0c4;
+
+      background: white;
+
+      font-size: 11px;
       font-weight: 800;
+
       cursor: pointer;
     }
 
-    .details-btn {
-      background: white;
-      color: #222;
-    }
+    .product-buttons .whatsapp {
+      background: #1fa85b;
+      border-color: #1fa85b;
 
-    .whatsapp-btn {
-      background: #1f9d55;
       color: white;
-      border-color: #1f9d55 !important;
     }
 
-    /* =========================
+
+    /* ==============================
        ABOUT
-    ========================= */
+    ============================== */
 
     .about {
-      background: #211c19;
+      background: #231914;
       color: white;
     }
 
@@ -524,9 +701,11 @@
     }
 
     .about-image {
-      border-radius: 20px;
+      height: 360px;
+
       overflow: hidden;
-      height: 350px;
+
+      border-radius: 20px;
     }
 
     .about-image img {
@@ -534,23 +713,29 @@
       object-fit: cover;
     }
 
-    .about-text .small {
-      color: #e0a77f;
-      font-weight: 800;
-      letter-spacing: 3px;
-      text-transform: uppercase;
+    .about-label {
+      color: #e1a174;
+
       font-size: 12px;
+      font-weight: 900;
+
+      letter-spacing: 3px;
+
+      text-transform: uppercase;
     }
 
     .about-text h2 {
       font-size: 38px;
+
       line-height: 1.1;
-      margin: 10px 0 18px;
+
+      margin: 9px 0 17px;
     }
 
     .about-text p {
-      color: #d7d0ca;
-      margin-bottom: 18px;
+      color: #d6cbc3;
+
+      margin-bottom: 17px;
     }
 
     .about-list {
@@ -558,42 +743,116 @@
     }
 
     .about-list li {
-      margin: 10px 0;
+      margin: 9px 0;
+
       color: #eee;
     }
 
-    /* =========================
+
+    /* ==============================
+       NIGERIAN LIFESTYLE BANNER
+    ============================== */
+
+    .lifestyle {
+      min-height: 400px;
+
+      display: flex;
+      align-items: center;
+
+      color: white;
+
+      background:
+        linear-gradient(
+          rgba(38,21,13,0.60),
+          rgba(38,21,13,0.75)
+        ),
+        url("https://www.gulftoday.ae/gulftoday/uploads/images/2025/08/28/997901.jpg")
+        center / cover no-repeat;
+    }
+
+    .lifestyle-content {
+      max-width: 650px;
+      margin: auto;
+
+      text-align: center;
+    }
+
+    .lifestyle-content small {
+      color: #f1c39f;
+
+      font-weight: 900;
+
+      letter-spacing: 3px;
+
+      text-transform: uppercase;
+    }
+
+    .lifestyle-content h2 {
+      font-size: clamp(35px, 8vw, 58px);
+
+      line-height: 1.05;
+
+      margin: 10px 0 15px;
+    }
+
+    .lifestyle-content p {
+      color: #f0e8e2;
+
+      margin-bottom: 25px;
+    }
+
+
+    /* ==============================
        DELIVERY
-    ========================= */
+    ============================== */
+
+    .delivery {
+      background: #f4ede5;
+    }
 
     .delivery-box {
-      background: linear-gradient(135deg, #b4734a, #8d5233);
+      background:
+        linear-gradient(
+          135deg,
+          #a96038,
+          #754027
+        );
+
       color: white;
-      border-radius: 24px;
-      padding: 38px 24px;
+
+      border-radius: 23px;
+
+      padding: 40px 24px;
+
       text-align: center;
     }
 
     .delivery-box h2 {
       font-size: 32px;
+
       line-height: 1.15;
+
       margin-bottom: 12px;
     }
 
     .delivery-box p {
       max-width: 600px;
+
       margin: auto auto 22px;
-      color: #f9eee7;
+
+      color: #f6e8df;
     }
 
-    .delivery-box .btn {
-      max-width: 340px;
+    .delivery-box .button {
+      max-width: 330px;
+
       margin: auto;
     }
 
-    /* =========================
+
+    /* ==============================
        CONTACT
-    ========================= */
+    ============================== */
 
     .contact {
       background: white;
@@ -605,35 +864,43 @@
     }
 
     .contact-card {
-      border: 1px solid #eee5de;
-      background: #faf9f7;
-      border-radius: 16px;
-      padding: 22px;
+      padding: 23px;
+
+      background: #faf7f2;
+
+      border: 1px solid #eadfd5;
+
+      border-radius: 17px;
+
       text-align: center;
     }
 
-    .contact-card .icon {
+    .contact-icon {
       font-size: 28px;
-      margin-bottom: 6px;
+
+      margin-bottom: 5px;
     }
 
     .contact-card h3 {
       font-size: 16px;
-      margin-bottom: 4px;
     }
 
     .contact-card p {
       color: #777;
+
       font-size: 14px;
     }
 
-    /* =========================
+
+    /* ==============================
        FOOTER
-    ========================= */
+    ============================== */
 
     footer {
-      background: #151210;
+      background: #15100d;
+
       color: white;
+
       padding: 45px 20px 25px;
     }
 
@@ -644,76 +911,103 @@
 
     .footer-grid {
       display: grid;
-      gap: 30px;
+      gap: 28px;
     }
 
     .footer-brand h2 {
       font-size: 25px;
     }
 
-    .footer-brand h2 span {
-      color: #c07a4f;
+    .footer-brand span {
+      color: #c47b50;
     }
 
     .footer-brand p {
       color: #aaa;
+
+      max-width: 370px;
+
       margin-top: 10px;
-      max-width: 350px;
     }
 
     .footer-column h3 {
-      margin-bottom: 10px;
+      margin-bottom: 9px;
     }
 
     .footer-column a {
       display: block;
+
       color: #aaa;
+
       margin: 7px 0;
+
       font-size: 14px;
     }
 
     .copyright {
-      border-top: 1px solid #312c29;
+      border-top: 1px solid #302823;
+
       margin-top: 30px;
+
       padding-top: 20px;
-      color: #888;
-      font-size: 12px;
+
       text-align: center;
+
+      color: #888;
+
+      font-size: 12px;
     }
 
-    /* =========================
-       FLOATING WHATSAPP
-    ========================= */
+
+    /* ==============================
+       WHATSAPP FLOAT
+    ============================== */
 
     .floating-whatsapp {
       position: fixed;
+
       right: 17px;
       bottom: 18px;
+
       width: 58px;
       height: 58px;
+
       border-radius: 50%;
-      background: #25D366;
+
+      background: #25d366;
+
       color: white;
+
       display: flex;
       align-items: center;
       justify-content: center;
+
       font-size: 28px;
+
       box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+
       z-index: 999;
     }
 
-    /* =========================
+
+    /* ==============================
        MODAL
-    ========================= */
+    ============================== */
 
     .modal {
       display: none;
+
       position: fixed;
+
       inset: 0;
-      background: rgba(0,0,0,0.65);
-      z-index: 2000;
+
+      z-index: 3000;
+
+      background: rgba(0,0,0,0.70);
+
       align-items: center;
       justify-content: center;
+
       padding: 20px;
     }
 
@@ -722,16 +1016,21 @@
     }
 
     .modal-box {
-      background: white;
       width: 100%;
       max-width: 450px;
+
+      background: white;
+
       border-radius: 20px;
+
       overflow: hidden;
+
       position: relative;
     }
 
     .modal-box img {
       height: 270px;
+
       object-fit: cover;
     }
 
@@ -740,30 +1039,39 @@
     }
 
     .modal-content h2 {
-      margin-bottom: 8px;
+      margin: 5px 0 8px;
     }
 
     .modal-content p {
       color: #777;
-      margin-bottom: 15px;
+
+      margin-bottom: 17px;
     }
 
     .close-modal {
       position: absolute;
+
       top: 12px;
       right: 12px;
+
       width: 38px;
       height: 38px;
+
       border: none;
+
       border-radius: 50%;
+
       background: white;
-      font-size: 20px;
+
+      font-size: 22px;
+
       cursor: pointer;
     }
 
-    /* =========================
-       TABLET / DESKTOP
-    ========================= */
+
+    /* ==============================
+       DESKTOP
+    ============================== */
 
     @media (min-width: 700px) {
 
@@ -771,41 +1079,58 @@
         min-height: 82px;
       }
 
-      .menu-btn {
+      .menu-button {
         display: none;
       }
 
       .nav-links {
         position: static;
+
         display: flex !important;
+
         align-items: center;
+
         gap: 25px;
-        border: none;
+
         padding: 0;
+
+        border: none;
+
         background: transparent;
       }
 
       .nav-links a {
-        border: none;
         padding: 5px;
+
+        border: none;
+
         font-size: 14px;
       }
 
       .hero {
-        min-height: 650px;
+        min-height: 680px;
       }
 
       .hero-buttons {
         flex-direction: row;
+
         max-width: none;
       }
 
-      .hero-buttons .btn {
+      .hero-buttons .button {
         min-width: 210px;
       }
 
-      .feature-grid {
+      .intro-grid {
         grid-template-columns: repeat(4, 1fr);
+      }
+
+      .culture-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .culture-card {
+        min-height: 330px;
       }
 
       .category-grid {
@@ -813,7 +1138,7 @@
       }
 
       .category {
-        height: 280px;
+        height: 290px;
       }
 
       .product-grid {
@@ -837,10 +1162,15 @@
       }
     }
 
+
+    /* ==============================
+       SMALL PHONES
+    ============================== */
+
     @media (max-width: 390px) {
 
       .hero {
-        min-height: 590px;
+        min-height: 600px;
       }
 
       .hero h1 {
@@ -855,55 +1185,70 @@
         height: 190px;
       }
 
-      .product-info {
-        padding: 12px;
-      }
-
-      .product-info h3 {
-        font-size: 14px;
+      .culture-card {
+        min-height: 220px;
       }
 
       .category {
         height: 190px;
       }
+
     }
+
   </style>
 </head>
 
+
 <body>
 
-  <!-- =========================
+
+  <!-- ==============================
        HEADER
-  ========================= -->
+  ============================== -->
 
   <header>
+
     <nav class="navbar">
 
       <a href="#home" class="logo">
         O.G <span>BOUTIQUE</span>
       </a>
 
-      <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+      <button
+        class="menu-button"
+        id="menuButton"
+        aria-label="Open navigation"
+      >
         <span></span>
         <span></span>
         <span></span>
       </button>
 
       <div class="nav-links" id="navLinks">
+
         <a href="#home">Home</a>
+
+        <a href="#culture">Nigerian Style</a>
+
         <a href="#categories">Collections</a>
+
         <a href="#products">Products</a>
+
         <a href="#about">About</a>
+
         <a href="#contact">Contact</a>
+
       </div>
 
     </nav>
+
   </header>
 
 
-  <!-- =========================
+
+  <!-- ==============================
        HERO
-  ========================= -->
+  ============================== -->
 
   <main>
 
@@ -911,30 +1256,34 @@
 
       <div class="hero-content">
 
-        <div class="eyebrow">
-          Fashion • Style • Confidence
+        <div class="hero-label">
+          Nigerian Fashion • Style • Confidence
         </div>
 
         <h1>
-          Dress Your <span>Style.</span>
+          Wear Your <span>Story.</span>
         </h1>
 
         <p>
-          Discover stylish fashion pieces, footwear, bags and accessories
-          from O.G Boutique in Lafia, Nasarawa.
+          Discover fashion inspired by Nigerian style, culture and
+          everyday lifestyle — from beautiful clothing and footwear
+          to bags and accessories.
         </p>
 
         <div class="hero-buttons">
 
-          <a href="#products" class="btn btn-primary">
+          <a
+            href="#products"
+            class="button button-primary"
+          >
             Shop Collection
           </a>
 
           <a
-            href="https://wa.me/2348164330832?text=Hello%20O.G%20Boutique%2C%20I%20would%20like%20to%20make%20an%20enquiry."
-            class="btn btn-white"
+            href="https://wa.me/2348164330832?text=Hello%20O.G%20Boutique%2C%20I%20found%20your%20website%20and%20would%20like%20to%20make%20an%20enquiry."
             target="_blank"
             rel="noopener"
+            class="button button-light"
           >
             Order on WhatsApp
           </a>
@@ -946,119 +1295,9 @@
     </section>
 
 
-    <!-- =========================
-         FEATURES
-    ========================= -->
 
-    <div class="features">
+    <!-- ==============================
+         INTRO
+    ============================== -->
 
-      <div class="feature-grid">
-
-        <div class="feature">
-          <div class="feature-icon">✨</div>
-          <h3>Quality Style</h3>
-          <p>Fashion-focused selections</p>
-        </div>
-
-        <div class="feature">
-          <div class="feature-icon">👗</div>
-          <h3>Fashion</h3>
-          <p>Clothing & accessories</p>
-        </div>
-
-        <div class="feature">
-          <div class="feature-icon">🛍️</div>
-          <h3>Easy Ordering</h3>
-          <p>Order through WhatsApp</p>
-        </div>
-
-        <div class="feature">
-          <div class="feature-icon">🚚</div>
-          <h3>Delivery</h3>
-          <p>Ask about delivery options</p>
-        </div>
-
-      </div>
-
-    </div>
-
-
-    <!-- =========================
-         CATEGORIES
-    ========================= -->
-
-    <section class="categories" id="categories">
-
-      <div class="section-container">
-
-        <div class="section-heading">
-
-          <div class="small">
-            Explore
-          </div>
-
-          <h2>
-            Shop By Category
-          </h2>
-
-          <p>
-            Explore different fashion categories available at O.G Boutique.
-          </p>
-
-        </div>
-
-        <div class="category-grid">
-
-          <a href="#products" class="category">
-
-            <img
-              src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=85"
-              alt="Fashion clothing"
-            >
-
-            <div class="category-content">
-              <h3>Clothing</h3>
-              <p>Fashion pieces & outfits</p>
-            </div>
-
-          </a>
-
-
-          <a href="#products" class="category">
-
-            <img
-              src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=85"
-              alt="Fashion shoes"
-            >
-
-            <div class="category-content">
-              <h3>Shoes</h3>
-              <p>Stylish footwear</p>
-            </div>
-
-          </a>
-
-
-          <a href="#products" class="category">
-
-            <img
-              src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=900&q=85"
-              alt="Fashion bags"
-            >
-
-            <div class="category-content">
-              <h3>Bags</h3>
-              <p>Everyday & fashion bags</p>
-            </div>
-
-          </a>
-
-
-          <a href="#products" class="category">
-
-            <img
-              src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=900&q=85"
-              alt="Fashion accessories"
-            >
-
-            <div clas
+    <div class=
