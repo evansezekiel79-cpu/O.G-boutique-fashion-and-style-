@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>O.G Boutique | Fashion & Style</title>
+
+  <meta
+    name="description"
+    content="O.G Boutique — fashion, clothing, shoes, bags and accessories in Lafia, Nasarawa."
+  >
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #faf7f5;
+      color: #211b19;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+    }
+
+    /* HEADER */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #eee5e1;
+    }
+
+    .nav {
+      max-width: 1200px;
+      margin: auto;
+      min-height: 72px;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      color: #17110f;
+    }
+
+    .logo span {
+      color: #a66a45;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+      align-items: center;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .nav-links a:hover {
+      color: #a66a45;
+    }
+
+    .menu-btn {
+      display: none;
+      border: none;
+      background: transparent;
+      font-size: 28px;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 650px;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(24,17,14,0.88),
+          rgba(24,17,14,0.55),
+          rgba(24,17,14,0.15)
+        ),
+        url("https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1600&q=85")
+        center/cover;
+      color: white;
+    }
+
+    .hero-content {
+      width: 100%;
+      max-width: 1200px;
+      margin: auto;
+      padding: 80px 20px;
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 13px;
+      font-weight: 800;
+      margin-bottom: 18px;
+      color: #f0c7ac;
+    }
+
+    .hero h1 {
+      max-width: 700px;
+      font-size: clamp(45px, 8vw, 82px);
+      line-height: 0.98;
+      margin-bottom: 25px;
+    }
+
+    .hero p {
+      max-width: 600px;
+      font-size: 18px;
+      color: #f4e9e4;
+      margin-bottom: 35px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      padding: 14px 23px;
+      border-radius: 8px;
+      font-weight: 800;
+      border: 1px solid transparent;
+      transition: 0.25s;
+    }
+
+    .btn-primary {
+      background: #a66a45;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      background: #8e5738;
+    }
+
+    .btn-light {
+      background: white;
+      color: #211b19;
+    }
+
+    .btn-light:hover {
+      transform: translateY(-2px);
+    }
+
+    /* GENERAL */
+
+    section {
+      padding: 85px 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section-heading {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 45px;
+    }
+
+    .section-heading small {
+      color: #a66a45;
+      text-transform: uppercase;
+      font-weight: 900;
+      letter-spacing: 2px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: 1.1;
+      margin: 10px 0 14px;
+    }
+
+    .section-heading p {
+      color: #766b66;
+    }
+
+    /* FEATURES */
+
+    .features {
+      background: white;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .feature {
+      border: 1px solid #eee4df;
+      padding: 28px 20px;
+      border-radius: 14px;
+      background: #fff;
+      text-align: center;
+    }
+
+    .feature-icon {
+      font-size: 30px;
+      margin-bottom: 12px;
+    }
+
+    .feature h3 {
+      margin-bottom: 6px;
+    }
+
+    .feature p {
+      color: #766b66;
+      font-size: 14px;
+    }
+
+    /* CATEGORIES */
+
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .category {
+      min-height: 240px;
+      border-radius: 16px;
+      overflow: hidden;
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .category::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(transparent, rgba(0,0,0,.75));
+    }
+
+    .category-content {
+      position: relative;
+      z-index: 2;
+      color: white;
+      padding: 22px;
+    }
+
+    .category-content h3 {
+      font-size: 24px;
+    }
+
+    .category-1 {
+      background-image: url("https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=800&q=80");
+    }
+
+    .category-2 {
+      background-image: url("https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80");
+    }
+
+    .category-3 {
+      background-image: url("https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80");
+    }
+
+    .category-4 {
+      background-image: url("https://images.unsplash.com/photo-1612902456551-333ac5afa26e?auto=format&fit=crop&w=800&q=80");
+    }
+
+    /* PRODUCTS */
+
+    .products {
+      background: #fff;
+    }
+
+    .product-tools {
+      display: flex;
+      gap: 12px;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+
+    .search-box {
+      flex: 1;
+      min-width: 230px;
+      padding: 14px 16px;
+      border: 1px solid #ddd1cb;
+      border-radius: 9px;
+      font-size: 15px;
+      outline: none;
+    }
+
+    .search-box:focus {
+      border-color: #a66a45;
+    }
+
+    .filter-buttons {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      border: 1px solid #ddd1cb;
+      background: white;
+      padding: 11px 14px;
+      border-radius: 8px;
+      font-weight: 700;
+    }
+
+    .filter-btn.active,
+    .filter-btn:hover {
+      background: #211b19;
+      color: white;
+      border-color: #211b19;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .product-card {
+      border: 1px solid #eee4df;
+      border-radius: 14px;
+      overflow: hidden;
+      background: white;
+      transition: 0.25s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(40,20,10,.08);
+    }
+
+    .product-image {
+      height: 290px;
+      object-fit: cover;
+    }
+
+    .product-info {
+      padding: 18px;
+    }
+
+    .product-category {
+      color: #a66a45;
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .product-info h3 {
+      margin: 6px 0;
+      font-size: 18px;
+    }
+
+    .product-price {
+      font-weight: 900;
+      margin: 8px 0 15px;
+    }
+
+    .product-actions {
+      display: flex;
+      gap: 8px;
+    }
+
+    .small-btn {
+      flex: 1;
+      padding: 11px 8px;
+      border-radius: 7px;
+      border: 1px solid #ddd1cb;
+      font-weight: 800;
+      background: white;
+    }
+
+    .small-btn.whatsapp {
+      background: #218838;
+      border-color: #218838;
+      color: white;
+    }
+
+    /* ABOUT */
+
+    .about {
+      background: #f4eeea;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .about-image {
+      height: 520px;
+      object-fit: cover;
+      border-radius: 18px;
+    }
+
+    .about-text small {
+      color: #a66a45;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .about-text h2 {
+      font-size: clamp(34px, 5vw, 55px);
+      line-height: 1.05;
+      margin: 12px 0 20px;
+    }
+
+    .about-text p {
+      color: #665c57;
+      margin-bottom: 16px;
+    }
+
+    .about-list {
+      list-style: none;
+      margin: 25px 0;
+    }
+
+    .about-list li {
+      margin: 12px 0;
+      font-weight: 700;
+    }
+
+    /* DELIVERY */
+
+    .delivery {
+      background: #211b19;
+      color: white;
+    }
+
+    .delivery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .delivery-card {
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 14px;
+      padding: 30px;
+      background: rgba(255,255,255,.04);
+    }
+
+    .delivery-card span {
+      font-size: 32px;
+    }
+
+    .delivery-card h3 {
+      margin: 12px 0 8px;
+    }
+
+    .delivery-card p {
+      color: #cfc3bd;
+      font-size: 14px;
+    }
+
+    /* CONTACT */
+
+    .contact {
+      background: white;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 35px;
+    }
+
+    .contact-card {
+      border: 1px solid #eee4df;
+      padding: 30px;
+      border-radius: 16px;
+    }
+
+    .contact-item {
+      margin: 20px 0;
+    }
+
+    .contact-item strong {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .contact-item a {
+      color: #a66a45;
+      font-weight: 800;
+    }
+
+    .map-box {
+      min-height: 360px;
+      border-radius: 16px;
+      background:
+        linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),
+        url("https://images.unsplash.com/photo-1524666041070-9b876f3c8b5f?auto=format&fit=crop&w=1000&q=80")
+        center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      padding: 30px;
+    }
+
+    .map-box h3 {
+      font-size: 30px;
+      margin-bottom: 8px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #120e0c;
+      color: #d9cfca;
+      padding: 55px 20px 25px;
+    }
+
+    .footer-grid {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 40px;
+    }
+
+    footer h3 {
+      color: white;
+      margin-bottom: 15px;
+    }
+
+    footer p,
+    footer a {
+      color: #aaa09b;
+      font-size: 14px;
+    }
+
+    footer a:hover {
+      color: white;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .copyright {
+      max-width: 1200px;
+      margin: 40px auto 0;
+      padding-top: 20px;
+      border-top: 1px solid #302925;
+      text-align: center;
+      font-size: 13px;
+      color: #817772;
+    }
+
+    /* FLOATING WHATSAPP */
+
+    .whatsapp-float {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 2000;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #20c56a;
+      color: white;
+      font-size: 28px;
+      box-shadow: 0 8px 25px rgba(0,0,0,.25);
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 950px) {
+
+      .feature-grid,
+      .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .delivery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 650px) {
+
+      .nav {
+        min-height: 64px;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 64px;
+        background: white;
+        padding: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        border-bottom: 1px solid #eee4df;
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      .hero {
+        min-height: 600px;
+      }
+
+      .hero h1 {
+        font-size: 48px;
+      }
+
+      section {
+        padding: 65px 16px;
+      }
+
+      .feature-grid,
+      .category-grid,
+      .product-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+
+      .feature {
+        padding: 20px 10px;
+      }
+
+      .category {
+        min-height: 200px;
+      }
+
+      .product-image {
+        height: 230px;
+      }
+
+      .product-info {
+        padding: 13px;
+      }
+
+      .product-info h3 {
+        font-size: 15px;
+      }
+
+      .product-actions {
+        flex-direction: column;
+      }
+
+      .about-image {
+        height: 400px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header>
+    <nav class="nav">
+
+      <a href="#home" class="logo">
+        O.G <span>BOUTIQUE</span>
+      </a>
+
+      <button class="menu-btn" onclick="toggleMenu()" aria-label="Open menu">
+        ☰
+      </button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#categories">Categories</a>
+        <a href="#products">Collection</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+    </nav>
+  </header>
+
+
+  <!-- HERO -->
+
+  <section class="hero" id="home">
+
+    <div class="hero-content">
+
+      <div class="eyebrow">
+        Fashion • Style • Confidence
+      </div>
+
+      <h1>
+        Dress Your Style.
+      </h1>
+
+      <p>
+        Discover stylish fashion pieces, footwear, bags and accessories
+        from O.G Boutique in Lafia, Nasarawa.
+      </p>
+
+      <div class="hero-buttons">
+
+        <a href="#products" class="btn btn-primary">
+          Explore Collection
+        </a>
+
+        <a
+          href="https://wa.me/2348164330832?text=Hello%20O.G%20Boutique%2C%20I%20would%20like%20to%20make%20an%20enquiry."
+          class="btn btn-light"
+          target="_blank"
+        >
+          Order on WhatsApp
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FEATURES -->
+
+  <section class="features">
+
+    <div class="container">
+
+      <div class="feature-grid">
+
+        <div class="feature">
+          <div class="feature-icon">✨</div>
+          <h3>Quality Style</h3>
+          <p>Fashion pieces selected with style and quality in mind.</p>
+        </div>
+
+        <div class="feature">
+          <div class="feature-icon">🛍️</div>
+          <h3>Wide Selection</h3>
+          <p>Clothing, shoes, bags and accessories in one place.</p>
+        </div>
+
+        <div class="feature">
+          <div class="feature-icon">📱</div>
+          <h3>Easy Ordering</h3>
+          <p>Contact us directly through WhatsApp to make enquiries.</p>
+        </div>
+
+        <div class="feature">
+          <div class="feature-icon">🚚</div>
+          <h3>Delivery</h3>
+          <p>Delivery options can be arranged depending on your location.</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CATEGORIES -->
+
+  <section id="categories">
+
+    <div class="container">
+
+      <div class="section-heading">
+        <small>Shop by category</small>
+        <h2>Find Your Look</h2>
+        <p>
+          Explore our fashion categories and discover something that fits
+          your personal style.
+        </p>
+      </div>
+
+      <div class="category-grid">
+
+        <a href="#products" class="category category-1">
+          <div class="category-content">
+            <h3>Clothing</h3>
+            <p>Explore fashion pieces</p>
+          </div>
+        </a>
+
+        <a href="#products" class="category category-2">
+          <div class="category-content">
+            <h3>Shoes</h3>
+            <p>Complete your outfit</p>
+          </div>
+        </a>
+
+        <a href="#products" class="category category-3">
+          <div class="category-content">
+            <h3>Bags</h3>
+            <p>Carry your style</p>
+          </div>
+        </a>
+
+        <a href="#products" class="category category-4">
+          <div class="category-content">
+            <h3>Accessories</h3>
+            <p>Finish the look</p>
+          </div>
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- PRODUCTS -->
+
+  <section class="products" id="products">
+
+    <div class="container">
+
+      <div class="section-heading">
+        <small>Our collection</small>
+        <h2>Featured Products</h2>
+        <p>
+          Browse some sample products from our collection.
+          Product availability and prices should be confirmed with O.G Boutique.
+        </p>
+      </div>
+
+      <div class="product-tools">
+
+        <input
+          type="search"
+          id="searchInput"
+          class="search-box"
+          placeholder="Search products..."
+          oninput="searchProducts()"
+        >
+
+        <div class="filter-buttons">
+
+          <button class="filter-btn active" onclick="filterProducts('all', this)">
+            All
+          </button>
+
+          <button class="filter-btn" onclick="filterProducts('clothing', this)">
+            Clothing
+          </button>
+
+          <button class="filter-btn" onclick="filterProducts('shoes', this)">
+            Shoes
+          </button>
+
+          <button class="filter-btn" onclick="filterProducts('bags', this)">
+            Bags
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <div class="product-grid" id="productGrid">
+
+        <!-- PRODUCT 1 -->
+
+        <article class="product-card" data-category="clothing">
+
+          <img
+            class="product-image"
+            src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=85"
+            alt="Fashion clothing"
+          >
+
+          <div class="product-info">
+
+            <div class="product-category">Clothing</div>
+
+            <h3>Premium Fashion Piece</h3>
+
+            <div class="product-price">
+              Price on request
+            </div>
+
+            <div class="product-actions">
+
+              <button
+                class="small-btn"
+                onclick="askAbout('Premium Fashion Piece')"
+              >
+                Ask Price
+              </button>
+
+              <button
+                class="small-btn whatsapp"
+                onclick="orderProduct('Premium Fashion Piece')"
+              >
+                WhatsApp
+              </button>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <!-- PRODUCT 2 -->
+
+        <article class="product-card" data-category="clothing">
+
+          <img
+            class="product-image"
+            src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=85"
+            alt="Women's fashion"
+          >
+
+          <div class="product-info">
+
+            <div class="product-category">Clothing</div>
+
+            <h3>Elegant Outfit</h3>
+
+            <div class="product-price">
+              Price on request
+            </div>
+
+            <div class="product-actions">
+
+              <button
+                class="small-btn"
+                onclick="askAbout('Elegant Outfit')"
+              >
+                Ask Price
+              </button>
+
+              <button
+                class="small-btn whatsapp"
+                onclick="orderProduct('Elegant Outfit')"
+              >
+                WhatsApp
+              </button>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <!-- PRODUCT 3 -->
+
+        <article class="product-card" data-category="shoes">
+
+          <img
+            class="product-image"
+            src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=85"
+            alt="Fashion shoes"
+          >
+
+          <
