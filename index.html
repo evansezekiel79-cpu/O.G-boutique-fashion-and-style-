@@ -4,39 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>O.G Boutique | Fashion & Style</title>
+  <title>O.G Boutique | Fashion, Style & Accessories</title>
 
-  <meta
-    name="description"
-    content="O.G Boutique — fashion, clothing, shoes, bags and accessories in Lafia, Nasarawa."
-  >
+  <meta name="description" content="O.G Boutique in Lafia, Nasarawa. Discover clothing, shoes, bags and fashion accessories.">
+  <meta name="theme-color" content="#a9673f">
 
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-    }
-
-    html {
       scroll-behavior: smooth;
     }
 
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background: #faf7f5;
-      color: #211b19;
+      background: #faf9f7;
+      color: #171513;
       line-height: 1.6;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    button {
-      font-family: inherit;
-      cursor: pointer;
     }
 
     img {
@@ -44,460 +29,571 @@
       display: block;
     }
 
-    /* HEADER */
+    button,
+    a {
+      font-family: inherit;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
 
     header {
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(255,255,255,0.96);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid #eee5e1;
+      background: rgba(255,255,255,0.97);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid #eee8e2;
     }
 
-    .nav {
-      max-width: 1200px;
+    .navbar {
+      max-width: 1150px;
       margin: auto;
-      min-height: 72px;
+      min-height: 76px;
       padding: 0 20px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 20px;
     }
 
     .logo {
-      font-size: 22px;
+      font-size: 27px;
       font-weight: 900;
-      letter-spacing: 1px;
-      color: #17110f;
+      letter-spacing: -1px;
     }
 
     .logo span {
-      color: #a66a45;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 25px;
-      align-items: center;
-      font-size: 14px;
-      font-weight: 700;
-    }
-
-    .nav-links a:hover {
-      color: #a66a45;
+      color: #a9673f;
     }
 
     .menu-btn {
-      display: none;
+      width: 46px;
+      height: 46px;
       border: none;
       background: transparent;
-      font-size: 28px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
     }
 
-    /* HERO */
+    .menu-btn span {
+      width: 28px;
+      height: 3px;
+      background: #171513;
+      border-radius: 5px;
+    }
+
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 76px;
+      left: 0;
+      right: 0;
+      background: white;
+      border-bottom: 1px solid #eee8e2;
+      padding: 12px 20px 20px;
+    }
+
+    .nav-links.active {
+      display: block;
+    }
+
+    .nav-links a {
+      display: block;
+      padding: 13px 5px;
+      font-weight: 700;
+      border-bottom: 1px solid #f0ece8;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
 
     .hero {
-      min-height: 650px;
+      min-height: 620px;
       display: flex;
       align-items: center;
+      position: relative;
       background:
-        linear-gradient(
-          90deg,
-          rgba(24,17,14,0.88),
-          rgba(24,17,14,0.55),
-          rgba(24,17,14,0.15)
-        ),
-        url("https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1600&q=85")
-        center/cover;
+        linear-gradient(rgba(28,22,19,0.58), rgba(28,22,19,0.68)),
+        url("https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1400&q=85")
+        center/cover no-repeat;
       color: white;
     }
 
     .hero-content {
       width: 100%;
-      max-width: 1200px;
+      max-width: 1150px;
       margin: auto;
-      padding: 80px 20px;
+      padding: 65px 24px;
     }
 
     .eyebrow {
-      text-transform: uppercase;
-      letter-spacing: 3px;
+      display: inline-block;
+      color: #f0c6aa;
       font-size: 13px;
       font-weight: 800;
-      margin-bottom: 18px;
-      color: #f0c7ac;
+      letter-spacing: 4px;
+      margin-bottom: 15px;
+      text-transform: uppercase;
     }
 
     .hero h1 {
-      max-width: 700px;
-      font-size: clamp(45px, 8vw, 82px);
+      font-size: clamp(48px, 12vw, 86px);
       line-height: 0.98;
-      margin-bottom: 25px;
+      max-width: 650px;
+      letter-spacing: -3px;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 span {
+      color: #e0a77f;
     }
 
     .hero p {
       max-width: 600px;
       font-size: 18px;
-      color: #f4e9e4;
-      margin-bottom: 35px;
+      line-height: 1.75;
+      color: #f6f3f0;
+      margin-bottom: 30px;
     }
 
     .hero-buttons {
       display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
+      flex-direction: column;
+      gap: 12px;
+      max-width: 390px;
     }
 
     .btn {
-      display: inline-flex;
-      justify-content: center;
+      min-height: 58px;
+      padding: 15px 24px;
+      border-radius: 13px;
+      border: 2px solid transparent;
+      display: flex;
       align-items: center;
-      padding: 14px 23px;
-      border-radius: 8px;
+      justify-content: center;
+      font-size: 16px;
       font-weight: 800;
-      border: 1px solid transparent;
-      transition: 0.25s;
+      cursor: pointer;
+      transition: 0.2s ease;
     }
 
     .btn-primary {
-      background: #a66a45;
+      background: #b4734a;
       color: white;
     }
 
     .btn-primary:hover {
+      background: #995c38;
       transform: translateY(-2px);
-      background: #8e5738;
     }
 
-    .btn-light {
+    .btn-white {
       background: white;
-      color: #211b19;
+      color: #211c19;
     }
 
-    .btn-light:hover {
+    .btn-white:hover {
       transform: translateY(-2px);
     }
 
-    /* GENERAL */
+    /* =========================
+       QUICK FEATURES
+    ========================= */
+
+    .features {
+      max-width: 1100px;
+      margin: -45px auto 0;
+      padding: 0 18px;
+      position: relative;
+      z-index: 5;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .feature {
+      background: white;
+      border: 1px solid #eee7e1;
+      border-radius: 17px;
+      padding: 22px 15px;
+      text-align: center;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.07);
+    }
+
+    .feature-icon {
+      font-size: 27px;
+      margin-bottom: 7px;
+    }
+
+    .feature h3 {
+      font-size: 15px;
+      margin-bottom: 3px;
+    }
+
+    .feature p {
+      font-size: 12px;
+      color: #777;
+    }
+
+    /* =========================
+       GENERAL SECTIONS
+    ========================= */
 
     section {
-      padding: 85px 20px;
+      padding: 75px 18px;
     }
 
-    .container {
-      max-width: 1200px;
+    .section-container {
+      max-width: 1100px;
       margin: auto;
     }
 
     .section-heading {
       text-align: center;
-      max-width: 700px;
-      margin: 0 auto 45px;
+      margin-bottom: 35px;
     }
 
-    .section-heading small {
-      color: #a66a45;
+    .section-heading .small {
+      color: #a9673f;
+      font-weight: 800;
+      font-size: 13px;
+      letter-spacing: 3px;
       text-transform: uppercase;
-      font-weight: 900;
-      letter-spacing: 2px;
     }
 
     .section-heading h2 {
-      font-size: clamp(32px, 5vw, 48px);
+      font-size: clamp(30px, 7vw, 48px);
       line-height: 1.1;
-      margin: 10px 0 14px;
+      margin: 8px 0 12px;
     }
 
     .section-heading p {
-      color: #766b66;
+      color: #777;
+      max-width: 600px;
+      margin: auto;
     }
 
-    /* FEATURES */
+    /* =========================
+       CATEGORIES
+    ========================= */
 
-    .features {
-      background: white;
-    }
-
-    .feature-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
-    }
-
-    .feature {
-      border: 1px solid #eee4df;
-      padding: 28px 20px;
-      border-radius: 14px;
+    .categories {
       background: #fff;
-      text-align: center;
     }
-
-    .feature-icon {
-      font-size: 30px;
-      margin-bottom: 12px;
-    }
-
-    .feature h3 {
-      margin-bottom: 6px;
-    }
-
-    .feature p {
-      color: #766b66;
-      font-size: 14px;
-    }
-
-    /* CATEGORIES */
 
     .category-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
     }
 
     .category {
-      min-height: 240px;
-      border-radius: 16px;
-      overflow: hidden;
       position: relative;
-      background-size: cover;
-      background-position: center;
+      height: 220px;
+      overflow: hidden;
+      border-radius: 18px;
+      color: white;
       display: flex;
       align-items: flex-end;
+      padding: 20px;
+      background: #333;
     }
 
     .category::after {
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(transparent, rgba(0,0,0,.75));
+      background: linear-gradient(transparent 25%, rgba(0,0,0,0.75));
+    }
+
+    .category img {
+      position: absolute;
+      inset: 0;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .category:hover img {
+      transform: scale(1.07);
     }
 
     .category-content {
       position: relative;
       z-index: 2;
-      color: white;
-      padding: 22px;
     }
 
-    .category-content h3 {
-      font-size: 24px;
+    .category h3 {
+      font-size: 22px;
+      margin-bottom: 2px;
     }
 
-    .category-1 {
-      background-image: url("https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=800&q=80");
+    .category p {
+      font-size: 13px;
+      opacity: 0.9;
     }
 
-    .category-2 {
-      background-image: url("https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80");
-    }
+    /* =========================
+       PRODUCTS
+    ========================= */
 
-    .category-3 {
-      background-image: url("https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80");
-    }
-
-    .category-4 {
-      background-image: url("https://images.unsplash.com/photo-1612902456551-333ac5afa26e?auto=format&fit=crop&w=800&q=80");
-    }
-
-    /* PRODUCTS */
-
-    .products {
-      background: #fff;
-    }
-
-    .product-tools {
-      display: flex;
-      gap: 12px;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 30px;
-      flex-wrap: wrap;
+    .products-section {
+      background: #faf9f7;
     }
 
     .search-box {
-      flex: 1;
-      min-width: 230px;
-      padding: 14px 16px;
-      border: 1px solid #ddd1cb;
-      border-radius: 9px;
-      font-size: 15px;
+      max-width: 650px;
+      margin: 0 auto 25px;
+      position: relative;
+    }
+
+    .search-box input {
+      width: 100%;
+      height: 56px;
+      padding: 0 20px;
+      border-radius: 13px;
+      border: 1px solid #ddd4cc;
       outline: none;
+      font-size: 15px;
+      background: white;
     }
 
-    .search-box:focus {
-      border-color: #a66a45;
+    .search-box input:focus {
+      border-color: #b4734a;
     }
 
-    .filter-buttons {
+    .filters {
       display: flex;
       gap: 8px;
-      flex-wrap: wrap;
+      overflow-x: auto;
+      padding: 3px 2px 18px;
+      scrollbar-width: none;
+    }
+
+    .filters::-webkit-scrollbar {
+      display: none;
     }
 
     .filter-btn {
-      border: 1px solid #ddd1cb;
+      flex-shrink: 0;
+      padding: 10px 17px;
+      border: 1px solid #ddd4cc;
+      border-radius: 30px;
       background: white;
-      padding: 11px 14px;
-      border-radius: 8px;
+      cursor: pointer;
       font-weight: 700;
+      font-size: 13px;
     }
 
-    .filter-btn.active,
-    .filter-btn:hover {
-      background: #211b19;
+    .filter-btn.active {
+      background: #1b1715;
       color: white;
-      border-color: #211b19;
+      border-color: #1b1715;
     }
 
     .product-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 22px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
     }
 
     .product-card {
-      border: 1px solid #eee4df;
-      border-radius: 14px;
-      overflow: hidden;
       background: white;
-      transition: 0.25s;
+      border: 1px solid #eee7e1;
+      border-radius: 16px;
+      overflow: hidden;
+      transition: 0.2s ease;
     }
 
     .product-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 35px rgba(40,20,10,.08);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
     }
 
     .product-image {
-      height: 290px;
+      height: 220px;
+      overflow: hidden;
+      background: #eee;
+      position: relative;
+    }
+
+    .product-image img {
+      height: 100%;
       object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .product-card:hover .product-image img {
+      transform: scale(1.05);
+    }
+
+    .product-badge {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: white;
+      color: #222;
+      padding: 5px 9px;
+      border-radius: 20px;
+      font-size: 10px;
+      font-weight: 800;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.12);
     }
 
     .product-info {
-      padding: 18px;
+      padding: 15px;
     }
 
     .product-category {
-      color: #a66a45;
-      font-size: 12px;
-      font-weight: 900;
+      color: #a9673f;
       text-transform: uppercase;
       letter-spacing: 1px;
+      font-size: 9px;
+      font-weight: 800;
     }
 
     .product-info h3 {
-      margin: 6px 0;
-      font-size: 18px;
+      font-size: 16px;
+      margin: 5px 0;
+      line-height: 1.3;
     }
 
-    .product-price {
-      font-weight: 900;
-      margin: 8px 0 15px;
+    .price {
+      font-size: 14px;
+      font-weight: 800;
+      margin: 7px 0 12px;
     }
 
     .product-actions {
       display: flex;
-      gap: 8px;
+      gap: 7px;
     }
 
-    .small-btn {
+    .product-actions a,
+    .product-actions button {
       flex: 1;
-      padding: 11px 8px;
-      border-radius: 7px;
-      border: 1px solid #ddd1cb;
+      min-height: 40px;
+      border-radius: 9px;
+      border: 1px solid #ddd4cc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
       font-weight: 800;
+      cursor: pointer;
+    }
+
+    .details-btn {
       background: white;
+      color: #222;
     }
 
-    .small-btn.whatsapp {
-      background: #218838;
-      border-color: #218838;
+    .whatsapp-btn {
+      background: #1f9d55;
       color: white;
+      border-color: #1f9d55 !important;
     }
 
-    /* ABOUT */
+    /* =========================
+       ABOUT
+    ========================= */
 
     .about {
-      background: #f4eeea;
+      background: #211c19;
+      color: white;
     }
 
     .about-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 55px;
+      gap: 30px;
       align-items: center;
     }
 
     .about-image {
-      height: 520px;
-      object-fit: cover;
-      border-radius: 18px;
+      border-radius: 20px;
+      overflow: hidden;
+      height: 350px;
     }
 
-    .about-text small {
-      color: #a66a45;
-      font-weight: 900;
+    .about-image img {
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .about-text .small {
+      color: #e0a77f;
+      font-weight: 800;
+      letter-spacing: 3px;
       text-transform: uppercase;
-      letter-spacing: 2px;
+      font-size: 12px;
     }
 
     .about-text h2 {
-      font-size: clamp(34px, 5vw, 55px);
-      line-height: 1.05;
-      margin: 12px 0 20px;
+      font-size: 38px;
+      line-height: 1.1;
+      margin: 10px 0 18px;
     }
 
     .about-text p {
-      color: #665c57;
-      margin-bottom: 16px;
+      color: #d7d0ca;
+      margin-bottom: 18px;
     }
 
     .about-list {
       list-style: none;
-      margin: 25px 0;
     }
 
     .about-list li {
-      margin: 12px 0;
-      font-weight: 700;
+      margin: 10px 0;
+      color: #eee;
     }
 
-    /* DELIVERY */
+    /* =========================
+       DELIVERY
+    ========================= */
 
-    .delivery {
-      background: #211b19;
+    .delivery-box {
+      background: linear-gradient(135deg, #b4734a, #8d5233);
       color: white;
+      border-radius: 24px;
+      padding: 38px 24px;
+      text-align: center;
     }
 
-    .delivery-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .delivery-card {
-      border: 1px solid rgba(255,255,255,.15);
-      border-radius: 14px;
-      padding: 30px;
-      background: rgba(255,255,255,.04);
-    }
-
-    .delivery-card span {
+    .delivery-box h2 {
       font-size: 32px;
+      line-height: 1.15;
+      margin-bottom: 12px;
     }
 
-    .delivery-card h3 {
-      margin: 12px 0 8px;
+    .delivery-box p {
+      max-width: 600px;
+      margin: auto auto 22px;
+      color: #f9eee7;
     }
 
-    .delivery-card p {
-      color: #cfc3bd;
-      font-size: 14px;
+    .delivery-box .btn {
+      max-width: 340px;
+      margin: auto;
     }
 
-    /* CONTACT */
+    /* =========================
+       CONTACT
+    ========================= */
 
     .contact {
       background: white;
@@ -505,228 +601,270 @@
 
     .contact-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 35px;
+      gap: 14px;
     }
 
     .contact-card {
-      border: 1px solid #eee4df;
-      padding: 30px;
+      border: 1px solid #eee5de;
+      background: #faf9f7;
       border-radius: 16px;
-    }
-
-    .contact-item {
-      margin: 20px 0;
-    }
-
-    .contact-item strong {
-      display: block;
-      margin-bottom: 5px;
-    }
-
-    .contact-item a {
-      color: #a66a45;
-      font-weight: 800;
-    }
-
-    .map-box {
-      min-height: 360px;
-      border-radius: 16px;
-      background:
-        linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),
-        url("https://images.unsplash.com/photo-1524666041070-9b876f3c8b5f?auto=format&fit=crop&w=1000&q=80")
-        center/cover;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
+      padding: 22px;
       text-align: center;
-      padding: 30px;
     }
 
-    .map-box h3 {
-      font-size: 30px;
-      margin-bottom: 8px;
+    .contact-card .icon {
+      font-size: 28px;
+      margin-bottom: 6px;
     }
 
-    /* FOOTER */
-
-    footer {
-      background: #120e0c;
-      color: #d9cfca;
-      padding: 55px 20px 25px;
+    .contact-card h3 {
+      font-size: 16px;
+      margin-bottom: 4px;
     }
 
-    .footer-grid {
-      max-width: 1200px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr;
-      gap: 40px;
-    }
-
-    footer h3 {
-      color: white;
-      margin-bottom: 15px;
-    }
-
-    footer p,
-    footer a {
-      color: #aaa09b;
+    .contact-card p {
+      color: #777;
       font-size: 14px;
     }
 
-    footer a:hover {
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background: #151210;
       color: white;
+      padding: 45px 20px 25px;
     }
 
-    .footer-links {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
+    .footer-container {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .footer-grid {
+      display: grid;
+      gap: 30px;
+    }
+
+    .footer-brand h2 {
+      font-size: 25px;
+    }
+
+    .footer-brand h2 span {
+      color: #c07a4f;
+    }
+
+    .footer-brand p {
+      color: #aaa;
+      margin-top: 10px;
+      max-width: 350px;
+    }
+
+    .footer-column h3 {
+      margin-bottom: 10px;
+    }
+
+    .footer-column a {
+      display: block;
+      color: #aaa;
+      margin: 7px 0;
+      font-size: 14px;
     }
 
     .copyright {
-      max-width: 1200px;
-      margin: 40px auto 0;
+      border-top: 1px solid #312c29;
+      margin-top: 30px;
       padding-top: 20px;
-      border-top: 1px solid #302925;
+      color: #888;
+      font-size: 12px;
       text-align: center;
-      font-size: 13px;
-      color: #817772;
     }
 
-    /* FLOATING WHATSAPP */
+    /* =========================
+       FLOATING WHATSAPP
+    ========================= */
 
-    .whatsapp-float {
+    .floating-whatsapp {
       position: fixed;
-      right: 18px;
+      right: 17px;
       bottom: 18px;
-      z-index: 2000;
       width: 58px;
       height: 58px;
       border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: #20c56a;
+      background: #25D366;
       color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       font-size: 28px;
-      box-shadow: 0 8px 25px rgba(0,0,0,.25);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+      z-index: 999;
     }
 
-    /* RESPONSIVE */
+    /* =========================
+       MODAL
+    ========================= */
 
-    @media (max-width: 950px) {
-
-      .feature-grid,
-      .category-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .product-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .about-grid,
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .delivery-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr 1fr;
-      }
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.65);
+      z-index: 2000;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
     }
 
-    @media (max-width: 650px) {
+    .modal.active {
+      display: flex;
+    }
 
-      .nav {
-        min-height: 64px;
+    .modal-box {
+      background: white;
+      width: 100%;
+      max-width: 450px;
+      border-radius: 20px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .modal-box img {
+      height: 270px;
+      object-fit: cover;
+    }
+
+    .modal-content {
+      padding: 22px;
+    }
+
+    .modal-content h2 {
+      margin-bottom: 8px;
+    }
+
+    .modal-content p {
+      color: #777;
+      margin-bottom: 15px;
+    }
+
+    .close-modal {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      width: 38px;
+      height: 38px;
+      border: none;
+      border-radius: 50%;
+      background: white;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    /* =========================
+       TABLET / DESKTOP
+    ========================= */
+
+    @media (min-width: 700px) {
+
+      .navbar {
+        min-height: 82px;
       }
 
       .menu-btn {
-        display: block;
+        display: none;
       }
 
       .nav-links {
-        display: none;
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 64px;
-        background: white;
-        padding: 20px;
-        flex-direction: column;
-        align-items: flex-start;
-        border-bottom: 1px solid #eee4df;
+        position: static;
+        display: flex !important;
+        align-items: center;
+        gap: 25px;
+        border: none;
+        padding: 0;
+        background: transparent;
       }
 
-      .nav-links.show {
-        display: flex;
+      .nav-links a {
+        border: none;
+        padding: 5px;
+        font-size: 14px;
       }
 
       .hero {
-        min-height: 600px;
-      }
-
-      .hero h1 {
-        font-size: 48px;
-      }
-
-      section {
-        padding: 65px 16px;
-      }
-
-      .feature-grid,
-      .category-grid,
-      .product-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 12px;
-      }
-
-      .feature {
-        padding: 20px 10px;
-      }
-
-      .category {
-        min-height: 200px;
-      }
-
-      .product-image {
-        height: 230px;
-      }
-
-      .product-info {
-        padding: 13px;
-      }
-
-      .product-info h3 {
-        font-size: 15px;
-      }
-
-      .product-actions {
-        flex-direction: column;
-      }
-
-      .about-image {
-        height: 400px;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr;
+        min-height: 650px;
       }
 
       .hero-buttons {
-        flex-direction: column;
-        align-items: stretch;
+        flex-direction: row;
+        max-width: none;
       }
 
-      .btn {
-        width: 100%;
+      .hero-buttons .btn {
+        min-width: 210px;
+      }
+
+      .feature-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .category-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .category {
+        height: 280px;
+      }
+
+      .product-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .product-image {
+        height: 280px;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .contact-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .footer-grid {
+        grid-template-columns: 2fr 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 390px) {
+
+      .hero {
+        min-height: 590px;
+      }
+
+      .hero h1 {
+        font-size: 46px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .product-image {
+        height: 190px;
+      }
+
+      .product-info {
+        padding: 12px;
+      }
+
+      .product-info h3 {
+        font-size: 14px;
+      }
+
+      .category {
+        height: 190px;
       }
     }
   </style>
@@ -734,23 +872,27 @@
 
 <body>
 
-  <!-- HEADER -->
+  <!-- =========================
+       HEADER
+  ========================= -->
 
   <header>
-    <nav class="nav">
+    <nav class="navbar">
 
       <a href="#home" class="logo">
         O.G <span>BOUTIQUE</span>
       </a>
 
-      <button class="menu-btn" onclick="toggleMenu()" aria-label="Open menu">
-        ☰
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
 
       <div class="nav-links" id="navLinks">
         <a href="#home">Home</a>
-        <a href="#categories">Categories</a>
-        <a href="#products">Collection</a>
+        <a href="#categories">Collections</a>
+        <a href="#products">Products</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </div>
@@ -759,281 +901,164 @@
   </header>
 
 
-  <!-- HERO -->
+  <!-- =========================
+       HERO
+  ========================= -->
 
-  <section class="hero" id="home">
+  <main>
 
-    <div class="hero-content">
+    <section class="hero" id="home">
 
-      <div class="eyebrow">
-        Fashion • Style • Confidence
+      <div class="hero-content">
+
+        <div class="eyebrow">
+          Fashion • Style • Confidence
+        </div>
+
+        <h1>
+          Dress Your <span>Style.</span>
+        </h1>
+
+        <p>
+          Discover stylish fashion pieces, footwear, bags and accessories
+          from O.G Boutique in Lafia, Nasarawa.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a href="#products" class="btn btn-primary">
+            Shop Collection
+          </a>
+
+          <a
+            href="https://wa.me/2348164330832?text=Hello%20O.G%20Boutique%2C%20I%20would%20like%20to%20make%20an%20enquiry."
+            class="btn btn-white"
+            target="_blank"
+            rel="noopener"
+          >
+            Order on WhatsApp
+          </a>
+
+        </div>
+
       </div>
 
-      <h1>
-        Dress Your Style.
-      </h1>
-
-      <p>
-        Discover stylish fashion pieces, footwear, bags and accessories
-        from O.G Boutique in Lafia, Nasarawa.
-      </p>
-
-      <div class="hero-buttons">
-
-        <a href="#products" class="btn btn-primary">
-          Explore Collection
-        </a>
-
-        <a
-          href="https://wa.me/2348164330832?text=Hello%20O.G%20Boutique%2C%20I%20would%20like%20to%20make%20an%20enquiry."
-          class="btn btn-light"
-          target="_blank"
-        >
-          Order on WhatsApp
-        </a>
-
-      </div>
-
-    </div>
-
-  </section>
+    </section>
 
 
-  <!-- FEATURES -->
+    <!-- =========================
+         FEATURES
+    ========================= -->
 
-  <section class="features">
-
-    <div class="container">
+    <div class="features">
 
       <div class="feature-grid">
 
         <div class="feature">
           <div class="feature-icon">✨</div>
           <h3>Quality Style</h3>
-          <p>Fashion pieces selected with style and quality in mind.</p>
+          <p>Fashion-focused selections</p>
+        </div>
+
+        <div class="feature">
+          <div class="feature-icon">👗</div>
+          <h3>Fashion</h3>
+          <p>Clothing & accessories</p>
         </div>
 
         <div class="feature">
           <div class="feature-icon">🛍️</div>
-          <h3>Wide Selection</h3>
-          <p>Clothing, shoes, bags and accessories in one place.</p>
-        </div>
-
-        <div class="feature">
-          <div class="feature-icon">📱</div>
           <h3>Easy Ordering</h3>
-          <p>Contact us directly through WhatsApp to make enquiries.</p>
+          <p>Order through WhatsApp</p>
         </div>
 
         <div class="feature">
           <div class="feature-icon">🚚</div>
           <h3>Delivery</h3>
-          <p>Delivery options can be arranged depending on your location.</p>
+          <p>Ask about delivery options</p>
         </div>
 
       </div>
 
     </div>
 
-  </section>
 
+    <!-- =========================
+         CATEGORIES
+    ========================= -->
 
-  <!-- CATEGORIES -->
+    <section class="categories" id="categories">
 
-  <section id="categories">
+      <div class="section-container">
 
-    <div class="container">
+        <div class="section-heading">
 
-      <div class="section-heading">
-        <small>Shop by category</small>
-        <h2>Find Your Look</h2>
-        <p>
-          Explore our fashion categories and discover something that fits
-          your personal style.
-        </p>
-      </div>
-
-      <div class="category-grid">
-
-        <a href="#products" class="category category-1">
-          <div class="category-content">
-            <h3>Clothing</h3>
-            <p>Explore fashion pieces</p>
+          <div class="small">
+            Explore
           </div>
-        </a>
 
-        <a href="#products" class="category category-2">
-          <div class="category-content">
-            <h3>Shoes</h3>
-            <p>Complete your outfit</p>
-          </div>
-        </a>
+          <h2>
+            Shop By Category
+          </h2>
 
-        <a href="#products" class="category category-3">
-          <div class="category-content">
-            <h3>Bags</h3>
-            <p>Carry your style</p>
-          </div>
-        </a>
-
-        <a href="#products" class="category category-4">
-          <div class="category-content">
-            <h3>Accessories</h3>
-            <p>Finish the look</p>
-          </div>
-        </a>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- PRODUCTS -->
-
-  <section class="products" id="products">
-
-    <div class="container">
-
-      <div class="section-heading">
-        <small>Our collection</small>
-        <h2>Featured Products</h2>
-        <p>
-          Browse some sample products from our collection.
-          Product availability and prices should be confirmed with O.G Boutique.
-        </p>
-      </div>
-
-      <div class="product-tools">
-
-        <input
-          type="search"
-          id="searchInput"
-          class="search-box"
-          placeholder="Search products..."
-          oninput="searchProducts()"
-        >
-
-        <div class="filter-buttons">
-
-          <button class="filter-btn active" onclick="filterProducts('all', this)">
-            All
-          </button>
-
-          <button class="filter-btn" onclick="filterProducts('clothing', this)">
-            Clothing
-          </button>
-
-          <button class="filter-btn" onclick="filterProducts('shoes', this)">
-            Shoes
-          </button>
-
-          <button class="filter-btn" onclick="filterProducts('bags', this)">
-            Bags
-          </button>
+          <p>
+            Explore different fashion categories available at O.G Boutique.
+          </p>
 
         </div>
 
-      </div>
+        <div class="category-grid">
 
+          <a href="#products" class="category">
 
-      <div class="product-grid" id="productGrid">
+            <img
+              src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=85"
+              alt="Fashion clothing"
+            >
 
-        <!-- PRODUCT 1 -->
-
-        <article class="product-card" data-category="clothing">
-
-          <img
-            class="product-image"
-            src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=85"
-            alt="Fashion clothing"
-          >
-
-          <div class="product-info">
-
-            <div class="product-category">Clothing</div>
-
-            <h3>Premium Fashion Piece</h3>
-
-            <div class="product-price">
-              Price on request
+            <div class="category-content">
+              <h3>Clothing</h3>
+              <p>Fashion pieces & outfits</p>
             </div>
 
-            <div class="product-actions">
+          </a>
 
-              <button
-                class="small-btn"
-                onclick="askAbout('Premium Fashion Piece')"
-              >
-                Ask Price
-              </button>
 
-              <button
-                class="small-btn whatsapp"
-                onclick="orderProduct('Premium Fashion Piece')"
-              >
-                WhatsApp
-              </button>
+          <a href="#products" class="category">
 
+            <img
+              src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=85"
+              alt="Fashion shoes"
+            >
+
+            <div class="category-content">
+              <h3>Shoes</h3>
+              <p>Stylish footwear</p>
             </div>
 
-          </div>
-
-        </article>
+          </a>
 
 
-        <!-- PRODUCT 2 -->
+          <a href="#products" class="category">
 
-        <article class="product-card" data-category="clothing">
+            <img
+              src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=900&q=85"
+              alt="Fashion bags"
+            >
 
-          <img
-            class="product-image"
-            src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=85"
-            alt="Women's fashion"
-          >
-
-          <div class="product-info">
-
-            <div class="product-category">Clothing</div>
-
-            <h3>Elegant Outfit</h3>
-
-            <div class="product-price">
-              Price on request
+            <div class="category-content">
+              <h3>Bags</h3>
+              <p>Everyday & fashion bags</p>
             </div>
 
-            <div class="product-actions">
-
-              <button
-                class="small-btn"
-                onclick="askAbout('Elegant Outfit')"
-              >
-                Ask Price
-              </button>
-
-              <button
-                class="small-btn whatsapp"
-                onclick="orderProduct('Elegant Outfit')"
-              >
-                WhatsApp
-              </button>
-
-            </div>
-
-          </div>
-
-        </article>
+          </a>
 
 
-        <!-- PRODUCT 3 -->
+          <a href="#products" class="category">
 
-        <article class="product-card" data-category="shoes">
+            <img
+              src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=900&q=85"
+              alt="Fashion accessories"
+            >
 
-          <img
-            class="product-image"
-            src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=85"
-            alt="Fashion shoes"
-          >
-
-          <
+            <div clas
